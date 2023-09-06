@@ -2,6 +2,7 @@ import './App.scss'
 import Button from '@/components/button/Button.tsx'
 import Table from '@/components/table/Table.tsx'
 import { ColumnDefs, ColumnType } from '@/components/table/models.ts'
+import Tag from '@/components/tag/Tag.tsx'
 
 function App() {
   const columns: ColumnDefs = [
@@ -52,6 +53,10 @@ function App() {
       </div>
       <div className="table">
         <Table columns={columns} data={data} />
+      </div>
+      <div style={{ background: 'green', display: 'flex', padding: '20px', 'justifyContent': 'center', gap: '20px' }}>
+        <Tag>Test 1</Tag>
+        <Tag>Test 2</Tag>
       </div>
     </main>
   )
