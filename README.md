@@ -1,6 +1,29 @@
 # JuanjoMartin95 - Lib
 
-# Installed:
+## Installation and setup
+
+### Install
+
+```
+npm install
+```
+
+### Usage
+
+
+```
+npm run dev
+```
+
+```
+npm run build
+```
+
+```
+npm run start
+```
+
+## Installed:
 - nvm
 - node
 - 18.17.0
