@@ -21,7 +21,7 @@ function App() {
         {
           key: 'seemore',
           label: 'See more',
-          variant: 'text',
+          variant: 'primary',
           action: rowData => {
             alert(rowData.name)
           },
