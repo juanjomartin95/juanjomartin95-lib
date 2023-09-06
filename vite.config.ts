@@ -13,17 +13,17 @@ export default defineConfig({
     preprocessorOptions: {
       scss: {
         implementation: sass,
-        additionalData: '@import "@/styles/defaults.scss";'
+        additionalData: '@import "@/styles/defaults.scss";',
       },
     },
   },
   resolve: {
-    alias: [{find: "@", replacement: path.resolve(__dirname, "src")}],
+    alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
   },
   test: {
     environment: 'jsdom',
     setupFiles: ['./vitest.setup.ts'],
     // testMatch: ['./src/**/*.test.tsx'],
-    globals: true
-  }
+    globals: true,
+  },
 })

@@ -10,7 +10,6 @@ npm install
 
 ### Usage
 
-
 ```
 npm run dev
 ```
@@ -24,6 +23,7 @@ npm run start
 ```
 
 ## Installed:
+
 - nvm
 - node
 - 18.17.0

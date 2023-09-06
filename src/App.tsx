@@ -54,7 +54,7 @@ function App() {
       <div className="table">
         <Table columns={columns} data={data} />
       </div>
-      <div style={{ background: 'green', display: 'flex', padding: '20px', 'justifyContent': 'center', gap: '20px' }}>
+      <div style={{ background: 'green', display: 'flex', padding: '20px', justifyContent: 'center', gap: '20px' }}>
         <Tag>Test 1</Tag>
         <Tag>Test 2</Tag>
       </div>
