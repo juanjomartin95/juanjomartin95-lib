@@ -6,11 +6,13 @@ import dts from 'vite-plugin-dts'
 import { resolve } from 'node:path'
 import * as packageJson from './package.json'
 import tsconfigPaths from 'vite-tsconfig-paths'
+import { libInjectCss } from 'vite-plugin-lib-inject-css'
 
 export default defineConfig({
   plugins: [
     react(),
     tsconfigPaths(),
+    libInjectCss(),
     dts({
       include: ['src/components/'],
     })

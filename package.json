@@ -1,7 +1,7 @@
 {
   "name": "juanjomartin95-lib",
   "private": false,
-  "version": "0.0.3",
+  "version": "0.0.5",
   "type": "module",
   "keywords": [],
   "author": "Juanjomartin95",
@@ -15,9 +15,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
-  "dependencies": {
-    "vite-tsconfig-paths": "^4.2.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@storybook/addon-essentials": "^7.4.0",
     "@storybook/addon-interactions": "^7.4.0",
@@ -49,7 +47,9 @@
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
     "vite-plugin-dts": "^3.5.3",
-    "vitest": "^0.34.3"
+    "vitest": "^0.34.3",
+    "vite-plugin-lib-inject-css": "^1.2.1",
+    "vite-tsconfig-paths": "^4.2.0"
   },
   "files": [
     "dist"
