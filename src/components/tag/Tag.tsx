@@ -3,7 +3,7 @@ import { Tag } from '@/components/tag/models.ts'
 import '@/components/tag/Tag.scss'
 
 const Tag: FC<Tag> = ({ children }) => {
-  return children && <div className="tag">{children}</div>
+  return children && <div className="custom-tag">{children}</div>
 }
 
 export default Tag
