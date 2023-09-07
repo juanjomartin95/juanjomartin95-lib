@@ -92,3 +92,18 @@ jobs:
 
       - name: Push new version tag to repository
         run: git push origin main --tags
+
+  publish:
+    name: Publish package on NPM
+    needs: version
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          registry-url: https://registry.npmjs.org/
+      - run: npm publish --access=public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
