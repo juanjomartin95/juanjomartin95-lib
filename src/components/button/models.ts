@@ -1,6 +1,6 @@
-import React from 'react'
+import * as React from 'react'
 
-export interface Button extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'primary' | 'secondary' | 'text'
   children?: React.ReactNode
 }

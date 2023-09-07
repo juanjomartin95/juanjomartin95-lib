@@ -1,8 +1,11 @@
 {
   "name": "juanjomartin95-lib",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.3",
   "type": "module",
+  "keywords": [],
+  "author": "Juanjomartin95",
+  "Description": "React + Typescript library components",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -13,15 +16,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@testing-library/jest-dom": "^6.1.2",
-    "@testing-library/react": "^14.0.0",
-    "eslint-plugin-react": "^7.33.2",
-    "prettier": "^3.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sass": "^1.66.1",
-    "sass-loader": "^13.3.2",
-    "vitest": "^0.34.3"
+    "vite-tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.4.0",
@@ -32,18 +27,55 @@
     "@storybook/react": "^7.4.0",
     "@storybook/react-vite": "^7.4.0",
     "@storybook/testing-library": "^0.2.0",
+    "@testing-library/jest-dom": "^6.1.2",
+    "@testing-library/react": "^14.0.0",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
     "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.13",
     "jsdom": "^22.1.0",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
     "storybook": "^7.4.0",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
-  }
+    "vite": "^4.4.5",
+    "vite-plugin-dts": "^3.5.3",
+    "vitest": "^0.34.3"
+  },
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/juanjomartin95-lib.es.js",
+      "require": "./dist/juanjomartin95-lib.umd.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "main": "./dist/juanjomartin95-lib.umd.js",
+  "module": "./dist/juanjomartin95-lib.es.js",
+  "types": "./dist/index.d.ts",
+  "peerDependencies": {
+    "react": "16.8.0 || >=17.x",
+    "react-dom": "16.8.0 || >=17.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juanjomartin95/juanjomartin95-lib"
+  },
+  "bugs": {
+    "url": "https://github.com/juanjomartin95/juanjomartin95-lib/issues"
+  },
+  "homepage": "https://github.com/juanjomartin95/juanjomartin95-lib#readme",
+  "license": "MIT"
 }

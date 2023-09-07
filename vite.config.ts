@@ -1,11 +1,20 @@
 /// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-import sass from 'sass'
-import path from 'path'
+import * as sass from 'sass'
+import dts from 'vite-plugin-dts'
+import { resolve } from 'node:path'
+import * as packageJson from './package.json'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    dts({
+      include: ['src/components/'],
+    })
+  ],
   server: {
     port: 3001,
   },
@@ -18,12 +27,23 @@ export default defineConfig({
     },
   },
   resolve: {
-    alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
+    alias: [{ find: '@', replacement: resolve(__dirname, 'src') }],
   },
   test: {
     environment: 'jsdom',
     setupFiles: ['./vitest.setup.ts'],
     // testMatch: ['./src/**/*.test.tsx'],
     globals: true,
+  },
+  build: {
+    lib: {
+      entry: resolve('src', 'components/index.ts'),
+      name: 'JuanjoMartin95-Lib',
+      formats: ['es', 'umd'],
+      fileName: (format) => `juanjomartin95-lib.${format}.js`,
+    },
+    rollupOptions: {
+      external: [...Object.keys(packageJson.peerDependencies)],
+    },
   },
 })

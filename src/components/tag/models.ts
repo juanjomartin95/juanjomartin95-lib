@@ -1,3 +1,3 @@
-export interface Tag {
+export interface TagProps {
   children: string
 }

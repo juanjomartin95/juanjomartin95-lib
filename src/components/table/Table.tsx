@@ -1,8 +1,8 @@
-import Button from '@/components/button/Button.tsx'
+import { Button } from '@/components/button/Button.tsx'
 import '@/components/table/Table.scss'
 import { Column, ColumnType, TableProps } from '@/components/table/models.ts'
 
-function Table<T>({ columns, data }: TableProps<T>) {
+export function Table<T>({ columns, data }: TableProps<T>) {
   const getDataFromField = (field: Column['field'], data: T): string => {
     const keys: string[] = field.split('.')
     let temp = data
@@ -53,5 +53,3 @@ function Table<T>({ columns, data }: TableProps<T>) {
     </table>
   )
 }
-
-export default Table

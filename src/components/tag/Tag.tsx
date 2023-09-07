@@ -1,9 +1,7 @@
 import { FC } from 'react'
-import { Tag } from '@/components/tag/models.ts'
+import { TagProps } from '@/components/tag/models.ts'
 import '@/components/tag/Tag.scss'
 
-const Tag: FC<Tag> = ({ children }) => {
+export const Tag: FC<TagProps> = ({ children }) => {
   return children && <div className="custom-tag">{children}</div>
 }
-
-export default Tag

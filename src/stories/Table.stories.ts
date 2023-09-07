@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import Table from '@/components/table/Table.tsx'
+import { Table } from '@/components/table/Table.tsx'
 import { ColumnType } from '@/components/table/models.ts'
 
 const meta = {

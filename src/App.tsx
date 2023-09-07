@@ -1,8 +1,8 @@
 import './App.scss'
-import Button from '@/components/button/Button.tsx'
-import Table from '@/components/table/Table.tsx'
+import { Button } from '@/components/button/Button.tsx'
+import { Table } from '@/components/table/Table.tsx'
 import { ColumnDefs, ColumnType } from '@/components/table/models.ts'
-import Tag from '@/components/tag/Tag.tsx'
+import { Tag } from '@/components/tag/Tag.tsx'
 
 function App() {
   const columns: ColumnDefs = [

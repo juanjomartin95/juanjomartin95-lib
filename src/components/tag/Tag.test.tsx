@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react'
 import { describe, expect, it } from 'vitest'
-import Tag from '@/components/tag/Tag.tsx'
+import { Tag } from '@/components/tag/Tag.tsx'
 
 describe('Tag component', () => {
   it('renders with text and class', () => {

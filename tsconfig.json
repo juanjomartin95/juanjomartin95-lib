@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
+    "moduleResolution": "Node",
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
@@ -20,9 +20,23 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "juanjomartin95-lib": [ "./src/components/index.ts" ] // [ "src/components/index.ts" ]
     }
   },
   "include": ["src", "*.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "references": [{ "path": "./tsconfig.node.json" }],
+
+  /* Extra config for npm library */
+  "allowJs": false,
+  "allowSyntheticDefaultImports": true,
+  "forceConsistentCasingInFileNames": true,
+  "declaration": true,
+  "esModuleInterop": true,
+  "declarationMap": true,
+  "baseUrl": ".",
+  "typeRoots": [
+    "node_modules/@types",
+    "src/components/index.d.ts"
+  ]
 }
